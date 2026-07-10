@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guo的小问答</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            background: #000;
+            color: #e4e4e4;
+            background-image: radial-gradient(rgba(212, 175, 55, 0.03) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 28px;
+            padding: 32px 20px;
+            background: #0d0d14;
+            border-radius: 16px;
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.08);
+            border: 1px solid rgba(212, 175, 55, 0.12);
+        }
+
+        h1 {
+            background: linear-gradient(90deg, #c8a440, #ffe699, #c8a440);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 12px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            font-size: 32px;
+        }
+
+        header p {
+            color: #a2a2b5;
+            font-size: 15px;
+        }
+
+        .test-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 22px;
+            padding: 16px 22px;
+            background: #0a0a10;
+            border-radius: 12px;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .timer {
+            font-weight: 500;
+            color: #ff7070;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 16px;
+            background: #08080d;
+            border-radius: 999px;
+            margin-bottom: 26px;
+            overflow: hidden;
+            border: 1px solid rgba(212, 175, 55, 0.12);
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #b08828, #e6c260);
+            width: 0%;
+            transition: width 0.3s ease;
+            box-shadow: 0 0 8px rgba(212, 175, 55, 0.4);
+            border-radius: 999px;
+        }
+
+        #question-container {
+            background: #0d0d14;
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 24px;
+            border: 1px solid rgba(212, 175, 55, 0.12);
+            min-height: 220px;
+        }
+
+        .question-number {
+            font-weight: bold;
+            color: #d4af37;
+            margin-bottom: 18px;
+            font-size: 20px;
+        }
+
+        .question-text {
+            margin-bottom: 24px;
+            font-size: 17px;
+            line-height: 1.8;
+            color: #f0f0f8;
+        }
+
+        .options {
+            margin-bottom: 28px;
+        }
+
+        .option {
+            margin-bottom: 16px;
+            cursor: pointer;
+            padding: 16px 20px;
+            border-radius: 10px;
+            transition: all 0.2s ease;
+            background: #08080d;
+            border: 1px solid rgba(212, 175, 55, 0.06);
+        }
+
+        .option:hover {
+            background: rgba(212, 175, 55, 0.06);
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+
+        .option input {
+            margin-right: 14px;
+            accent-color: #d4af37;
+        }
+
+        .button-container {
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #8c6d20, #d4af37);
+            color: #000;
+            font-weight: 600;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.25s ease;
+            margin-right: 14px;
+        }
+
+        .btn:hover {
+            background: linear-gradient(135deg, #a88226, #f0d070);
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+            transform: translateY(-1px);
+        }
+
+        .btn:disabled {
+            background: #1a1a24;
+            color: #666;
+            box-shadow: none;
+            transform: none;
+            cursor: not-allowed;
+        }
+
+        .result-container {
+            background: #0d0d14;
+            border-radius: 16px;
+            padding: 32px;
+            margin-top: 20px;
+            border: 1px solid rgba(212, 175, 55, 0.12);
+        }
+
+        .score {
+            font-size: 28px;
+            font-weight: bold;
+            background: linear-gradient(90deg, #d4af37, #ffe89c);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 24px;
+        }
+
+        .analysis-item {
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            background: #08080d;
+            border: 1px solid rgba(212, 175, 55, 0.08);
+        }
+
+        .analysis-question {
+            font-weight: bold;
+            margin-bottom: 12px;
+            color: #e6c870;
+        }
+
+        .analysis-answer {
+            margin-bottom: 10px;
+            color: #79dd6f;
+        }
+
+        .analysis-explanation {
+            line-height: 1.7;
+            color: #c0c0d2;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Guo的小问答</h1>
+        <p>考验你关于果果的小知识</p>
+    </header>
+
+    <div class="test-info">
+        <div class="timer">剩余时间: <span id="timer">30:00</span></div>
+        <div class="progress-text">进度: <span id="progress-text">0/0</span></div>
+    </div>
+
+    <div class="progress-bar">
+        <div class="progress-fill" id="progress-fill"></div>
+    </div>
+
+    <div id="question-container">加载题库中...</div>
+
+    <div class="button-container">
+        <button class="btn" id="prev-btn">上一题</button>
+        <button class="btn" id="next-btn">下一题</button>
+        <button class="btn" id="submit-btn">提交测试</button>
+    </div>
+
+    <div id="result-container" class="hidden">
+        <div class="score">测试得分: <span id="score">0</span>/0</div>
+        <div class="analysis-container" id="analysis-container"></div>
+    </div>
+</div>
+<script>
+    let questionBank = [];
+    let currentQuestionIndex = 0;
+    let userAnswers = [];
+    let timer = null;
+    let remainingTime = 30 * 60;
+
+    // 新增：从tk.json加载题库
+    async function loadQuestionJson() {
+        try {
+            const res = await fetch("./tk.json");
+            if (!res.ok) throw new Error("找不到tk.json，请和html放在同一文件夹");
+            questionBank = await res.json();
+            initTest();
+        } catch (err) {
+            document.getElementById("question-container").innerHTML = `<div style="color:#ff7070;text-align:center;padding:60px 0;">题库加载失败：${err.message}</div>`;
+            console.error("题库读取错误：", err);
+        }
+    }
+
+    // 初始化测试
+    function initTest() {
+        // 随机打乱题库，取全部题目考试
+        const shuffledQuestions = shuffle([...questionBank]);
+        window.testQuestions = shuffledQuestions.slice(0,20);
+        userAnswers = new Array(window.testQuestions.length).fill(null);
+
+        if(window.testQuestions.length === 0){
+            document.getElementById('question-container').innerHTML = `<div style="text-align:center;padding:80px 0;color:#888;">tk.json内无题目</div>`;
+            return;
+        }
+        showQuestion(0);
+        startTimer();
+    }
+
+    // 打乱数组
+    function shuffle(array) {
+        const newArray = [...array];
+        for (let i = newArray.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+        }
+        return newArray;
+    }
+
+    // 渲染题目
+    function showQuestion(index) {
+        const question = window.testQuestions[index];
+        const container = document.getElementById('question-container');
+
+        let html = `<div class="question-number">第${index + 1}题</div><div class="question-text">${question.text}</div><div class="options">`;
+        for (let i = 0; i < question.options.length; i++) {
+            const checked = userAnswers[index] === i ? 'checked' : '';
+            html += `
+                <div class="option">
+                    <input type="radio" name="ans" id="opt${i}" value="${i}" ${checked}>
+                    <label for="opt${i}">${question.options[i]}</label>
+                </div>
+            `;
+        }
+        html += `</div>`;
+        container.innerHTML = html;
+
+        updateProgress(index);
+        document.getElementById('prev-btn').disabled = index === 0;
+        document.getElementById('next-btn').disabled = index === window.testQuestions.length - 1;
+    }
+
+    // 更新进度条
+    function updateProgress(index) {
+        const total = window.testQuestions.length;
+        const percent = ((index + 1) / total) * 100;
+        document.getElementById('progress-fill').style.width = percent + '%';
+        document.getElementById('progress-text').textContent = `${index+1}/${total}`;
+    }
+
+    // 倒计时
+    function startTimer() {
+        timer = setInterval(() => {
+            remainingTime--;
+            const m = Math.floor(remainingTime / 60).toString().padStart(2,'0');
+            const s = (remainingTime % 60).toString().padStart(2,'0');
+            document.getElementById('timer').textContent = `${m}:${s}`;
+            if (remainingTime <= 0) submitTest();
+        }, 1000);
+    }
+
+    // 保存当前选择
+    function saveAnswer() {
+        const radios = document.querySelectorAll('input[name="ans"]:checked');
+        userAnswers[currentQuestionIndex] = radios.length ? Number(radios[0].value) : null;
+    }
+
+    function prevQuestion() {
+        saveAnswer();
+        currentQuestionIndex--;
+        showQuestion(currentQuestionIndex);
+    }
+
+    function nextQuestion() {
+        saveAnswer();
+        currentQuestionIndex++;
+        showQuestion(currentQuestionIndex);
+    }
+
+    // 交卷判分
+    function submitTest() {
+        saveAnswer();
+        clearInterval(timer);
+        let score = 0;
+        const total = window.testQuestions.length;
+        for(let i=0;i<total;i++){
+            const q = window.testQuestions[i];
+            const sel = userAnswers[i];
+            if(sel !== null && q.options[sel] === q.answer) score++;
+        }
+
+        // 展示结果
+        document.getElementById('score').innerText = score;
+        const analysisBox = document.getElementById('analysis-container');
+        let html = '';
+        for(let i=0;i<total;i++){
+            const q = window.testQuestions[i];
+            const selIdx = userAnswers[i];
+            const myAns = selIdx !== null ? q.options[selIdx] : '未作答';
+            html += `
+                <div class="analysis-item">
+                    <div class="analysis-question">第${i+1}题：${q.text}</div>
+                    <div class="analysis-answer">你的答案：${myAns}</div>
+                    <div class="analysis-answer">正确答案：${q.answer}</div>
+                    <div class="analysis-explanation">解析：${q.explanation}</div>
+                </div>
+            `;
+        }
+        analysisBox.innerHTML = html;
+
+        document.getElementById('question-container').classList.add('hidden');
+        document.querySelector('.button-container').classList.add('hidden');
+        document.getElementById('result-container').classList.remove('hidden');
+    }
+
+    // 绑定按钮事件
+    document.getElementById('prev-btn').onclick = prevQuestion;
+    document.getElementById('next-btn').onclick = nextQuestion;
+    document.getElementById('submit-btn').onclick = submitTest;
+
+    // 页面加载完成读取json题库
+    window.onload = loadQuestionJson;
+</script>
+</body>
+</html>

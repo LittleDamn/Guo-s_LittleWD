@@ -1,0 +1,386 @@
+[
+    {
+        "id": 1,
+        "type": "single",
+        "text": "果果的生日是？",
+        "options": ["6.22", "5.20", "10.6", "11.5"],
+        "answer": "6.22",
+        "explanation": "果果的生日是6月22日"
+    },
+    {
+        "id": 2,
+        "type": "single",
+        "text": "果果最喜欢的水果？",
+        "options": ["苹果", "草莓", "榴莲", "橙子"],
+        "answer": "草莓",
+        "explanation": "果果最爱香甜草莓"
+    },
+    {
+        "id": 3,
+        "type": "single",
+        "text": "果果最喜欢的颜色？",
+        "options": ["黑色", "粉色", "蓝色", "灰色"],
+        "answer": "蓝色",
+        "explanation": "果果喜欢蓝色"
+    },
+    {
+        "id": 4,
+        "type": "single",
+        "text": "果果喜欢的饮品？",
+        "options": ["果之茶", "奶茶", "咖啡", "碳酸饮料"],
+        "answer": "果之茶",
+        "explanation": "果果很爱喝果之茶"
+    },
+    {
+        "id": 5,
+        "type": "single",
+        "text": "果果平时喜欢什么休闲活动？",
+        "options": ["打游戏", "追剧", "爬山", "钓鱼"],
+        "answer": "打游戏",
+        "explanation": "空闲时间果果最爱打游戏"
+    },
+    {
+        "id": 6,
+        "type": "single",
+        "text": "果果最讨厌什么天气？",
+        "options": ["晴天", "雨天", "大雾天", "雪天"],
+        "answer": "晴天",
+        "explanation": "晴天炎热暴晒的天气果果不喜欢"
+    },
+    {
+        "id": 7,
+        "type": "single",
+        "text": "果果爱吃辣吗？",
+        "options": ["超爱吃", "微辣可以", "完全不吃辣", "只吃特辣"],
+        "answer": "超爱吃",
+        "explanation": "果果超爱吃辣味食物"
+    },
+    {
+        "id": 8,
+        "type": "single",
+        "text": "果果理想的出行地点？",
+        "options": ["海边", "山区", "城市商场", "古镇"],
+        "answer": "海边",
+        "explanation": "果果很喜欢海边风景"
+    },
+    {
+        "id": 9,
+        "type": "single",
+        "text": "果果作息偏向？",
+        "options": ["早睡早起", "晚睡晚起", "中午才起床", "以上都是"],
+        "answer": "以上都是",
+        "explanation": "果果习惯 早睡早起 , 晚睡晚起 和 中午起床"
+    },
+    {
+        "id": 10,
+        "type": "single",
+        "text": "果果喜欢小动物吗？",
+        "options": ["只喜欢猫", "只喜欢狗", "猫狗都喜欢", "不喜欢小动物"],
+        "answer": "猫狗都喜欢",
+        "explanation": "猫猫狗狗果果都很喜欢"
+    },
+    {
+        "id": 11,
+        "type": "single",
+        "text": "果果偏好什么口味甜品？",
+        "options": ["巧克力", "奶油草莓", "抹茶", "芒果"],
+        "answer": "奶油草莓",
+        "explanation": "草莓奶油甜品是果果首选"
+    },
+    {
+        "id": 12,
+        "type": "single",
+        "text": "果果周末更喜欢？",
+        "options": ["出门逛街", "宅家休息", "短途旅游", "运动健身"],
+        "answer": "宅家休息",
+        "explanation": "周末果果更愿意在家放松"
+    },
+    {
+        "id": 13,
+        "type": "single",
+        "text": "果果最讨厌什么虫子？",
+        "options": ["蚂蚁", "蟑螂", "蝴蝶", "瓢虫"],
+        "answer": "蟑螂",
+        "explanation": "果果十分讨厌蟑螂"
+    },
+    {
+        "id": 14,
+        "type": "single",
+        "text": "果果最喜欢的季节？",
+        "options": ["春天", "夏天", "秋天", "冬天"],
+        "answer": "秋天",
+        "explanation": "凉爽的秋天果果最喜欢"
+    },
+    {
+        "id": 15,
+        "type": "single",
+        "text": "果果拍照喜欢？",
+        "options": ["远景风景", "小动物", "美食", "以上都是"],
+        "answer": "以上都是",
+        "explanation": "果果喜欢拍 远景风景 , 小动物 , 美食"
+    },
+    {
+        "id": 16,
+        "type": "single",
+        "text": "果果早餐首选？",
+        "options": ["面包牛奶", "馍夹菜", "包子", "以上都是"],
+        "answer": "包子",
+        "explanation": "早餐果果常吃包子"
+    },
+    {
+        "id": 17,
+        "type": "single",
+        "text": "果果喜欢听歌类型？",
+        "options": ["摇滚", "温柔抒情", "说唱", "所给选项中无正确答案"],
+        "answer": "所给选项中无正确答案",
+        "explanation": "果果偏爱英文歌歌曲"
+    },
+    {
+        "id": 18,
+        "type": "single",
+        "text": "果果逛街最爱逛？",
+        "options": ["服装店", "零食店", "饰品店", "书店"],
+        "answer": "零食店",
+        "explanation": "果果很喜欢吃零食"
+    },
+    {
+        "id": 19,
+        "type": "single",
+        "text": "果果感冒最先出现的症状？",
+        "options": ["咳嗽", "鼻塞", "发烧", "喉咙痛"],
+        "answer": "咳嗽",
+        "explanation": "果果感冒一般先咳嗽"
+    },
+    {
+        "id": 20,
+        "type": "single",
+        "text": "果果每年最期待的日子？",
+        "options": ["新年", "自己生日", "假期", "情人节"],
+        "answer": "自己生日",
+        "explanation": "果果最期待每年6.22生日"
+    },
+    {
+        "id": 21,
+        "type": "single",
+        "text": "果果喜欢长发还是短发？",
+        "options": ["长发(2cm)", "短发(1cm)", "都可以", "无所谓"],
+        "answer": "长发",
+        "explanation": "果果更喜欢长发造型"
+    },
+    {
+        "id": 22,
+        "type": "single",
+        "text": "果果喜欢的穿搭风格？",
+        "options": ["酷飒风", "甜美风", "工装风", "复古风"],
+        "answer": "酷飒风",
+        "explanation": "果果日常偏爱酷飒穿搭"
+    },
+    {
+        "id": 23,
+        "type": "single",
+        "text": "果果更喜欢晴天还是阴天？",
+        "options": ["晴天", "阴天", "雨天", "下雪天"],
+        "answer": "阴天",
+        "explanation": "阴天不晒，出门更舒服"
+    },
+    {
+        "id": 24,
+        "type": "single",
+        "text": "果果追剧偏爱哪种题材？",
+        "options": ["甜宠恋爱", "以下都对", "科幻", "刑侦"],
+        "answer": "以下都对",
+        "explanation": "果果最爱看 科幻  , 刑侦"
+    },
+    {
+        "id": 25,
+        "type": "single",
+        "text": "果果喜欢冰淇淋口味？",
+        "options": ["香草", "草莓", "巧克力", "抹茶"],
+        "answer": "草莓",
+        "explanation": "草莓冰淇淋是果果最爱"
+    },
+    {
+        "id": 26,
+        "type": "single",
+        "text": "果果出门必带物品？",
+        "options": ["耳机", "口红", "雨伞", "无"],
+        "answer": "无",
+        "explanation": "果果出门一定会带上自己"
+    },
+    {
+        "id": 27,
+        "type": "single",
+        "text": "果果能接受熬夜到几点？",
+        "options": ["11点前", "12点", "1点", "2点以后"],
+        "answer": "11点前",
+        "explanation": "果果尽量十一点前睡觉，不熬夜"
+    },
+    {
+        "id": 28,
+        "type": "single",
+        "text": "果果喜欢毛绒玩偶吗？",
+        "options": ["超级喜欢", "一般", "不喜欢", "害怕"],
+        "answer": "一般",
+        "explanation": "果果床上放了几个毛绒玩偶"
+    },
+    {
+        "id": 29,
+        "type": "single",
+        "text": "果果更喜欢外卖还是做饭？",
+        "options": ["外卖", "自己做饭", "都一样", "只吃家里做的"],
+        "answer": "自己做饭",
+        "explanation": "果果自己做饭,只不过是煮方便面"
+    },
+    {
+        "id": 30,
+        "type": "single",
+        "text": "果果害怕打雷吗？",
+        "options": ["非常怕", "有点怕", "完全不怕", "觉得好玩"],
+        "answer": "觉得好玩",
+        "explanation": "打雷天气果果会看打雷"
+    },
+    {
+        "id": 31,
+        "type": "single",
+        "text": "果果理想的卧室氛围？",
+        "options": ["亮白光", "暖黄光", "冷蓝光", "不开灯"],
+        "answer": "亮白光",
+        "explanation": "亮白光适合写作业和看书"
+    },
+    {
+        "id": 32,
+        "type": "single",
+        "text": "果果爱吃火锅锅底？",
+        "options": ["清汤", "番茄", "牛油辣", "菌汤"],
+        "answer": "番茄",
+        "explanation": "果果最偏爱番茄火锅汤底"
+    },
+    {
+        "id": 33,
+        "type": "single",
+        "text": "果果更喜欢线上聊天还是见面？",
+        "options": ["线上", "线下见面", "以上均可", "不爱交流"],
+        "answer": "以上均可",
+        "explanation": "本题无解析"
+    },
+    {
+        "id": 34,
+        "type": "single",
+        "text": "果果喜欢鲜花种类？",
+        "options": ["玫瑰", "郁金香", "满天星", "向日葵"],
+        "answer": "向日葵",
+        "explanation": "果果最喜欢向日葵"
+    },
+    {
+        "id": 35,
+        "type": "single",
+        "text": "果果坐车喜欢坐哪边？",
+        "options": ["副驾", "后排左侧", "后排右侧", "中间"],
+        "answer": "后排右侧",
+        "explanation": "果果坐车习惯坐后排右侧位置,因为能直接下车"
+    },
+    {
+        "id": 36,
+        "type": "single",
+        "text": "果果空闲会刷哪个软件居多？",
+        "options": ["抖音", "小红书", "B站", "微博"],
+        "answer": "抖音",
+        "explanation": "果果经常刷抖音随便看"
+    },
+    {
+        "id": 37,
+        "type": "single",
+        "text": "果果喜欢蛋糕胚？",
+        "options": ["戚风", "慕斯", "芝士", "黑森林"],
+        "answer": "黑森林",
+        "explanation": "巧克力黑森林蛋糕果果最爱"
+    },
+    {
+        "id": 38,
+        "type": "single",
+        "text": "果果讨厌别人哪种行为？",
+        "options": ["迟到", "说谎", "大声说话", "无"],
+        "answer": "无",
+        "explanation": "无"
+    },
+    {
+        "id": 39,
+        "type": "single",
+        "text": "果果想要什么类型礼物？",
+        "options": ["饰品", "零食花束", "玩偶", "护肤品"],
+        "answer": "零食花束",
+        "explanation": "零食花束好看又好吃，果果很喜欢"
+    },
+    {
+        "id": 40,
+        "type": "single",
+        "text": "果果跑步还是散步？",
+        "options": ["跑步", "散步", "都不运动", "瑜伽"],
+        "answer": "散步",
+        "explanation": "果果只喜欢慢悠悠散步，不剧烈运动"
+    },
+    {
+        "id": 41,
+        "type": "single",
+        "text": "果果夏天更喜欢短袖还是长袖？",
+        "options": ["短袖+长裤", "长袖", "卫衣", "连衣裙"],
+        "answer": "短袖+长裤",
+        "explanation": "夏天果果爱穿短袖+长裤"
+    },
+    {
+        "id": 42,
+        "type": "single",
+        "text": "果果吃薯条蘸什么？",
+        "options": ["番茄酱", "芝士酱", "辣椒粉", "不蘸酱"],
+        "answer": "番茄酱",
+        "explanation": "果果吃薯条标配番茄酱"
+    },
+    {
+        "id": 43,
+        "type": "single",
+        "text": "果果旅行带什么收纳？",
+        "options": ["行李箱", "衣服袋", "分装瓶", "相机包"],
+        "answer": "行李箱",
+        "explanation": "无"
+    },
+    {
+        "id": 44,
+        "type": "single",
+        "text": "果果喜欢小动物里首选？",
+        "options": ["布偶猫", "小型犬", "仓鼠", "兔子"],
+        "answer": "布偶猫",
+        "explanation": "温柔布偶猫是果果心中第一"
+    },
+    {
+        "id": 45,
+        "type": "single",
+        "text": "果果喝奶茶甜度？",
+        "options": ["全糖", "七分糖", "五分糖", "不喝奶茶"],
+        "answer": "不喝奶茶",
+        "explanation": "果果不喝奶茶"
+    },
+    {
+        "id": 46,
+        "type": "single",
+        "text": "果果喜欢清晨还是傍晚？",
+        "options": ["清晨", "傍晚", "深夜", "正午"],
+        "answer": "傍晚",
+        "explanation": "傍晚日落风景果果超爱"
+    },
+    {
+        "id": 47,
+        "type": "single",
+        "text": "果果喜欢纸质书还是电子书？",
+        "options": ["纸质书", "电子书", "都不看", "杂志"],
+        "answer": "纸质书",
+        "explanation": "果果喜欢纸质书本的质感"
+    },
+    {
+        "id": 48,
+        "type": "single",
+        "text": "果果理想场所？",
+        "options": ["电影院", "甜品店", "海边散步", "游乐园"],
+        "answer": "游乐园",
+        "explanation": "游乐园好玩"
+    }
+]
