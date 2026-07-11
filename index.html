@@ -10,202 +10,172 @@
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
-            font-family: 'Microsoft YaHei', sans-serif;
+            font-family: "微软雅黑",sans-serif;
             background: #000;
-            color: #e4e4e4;
-            background-image: radial-gradient(rgba(212, 175, 55, 0.03) 1px, transparent 1px);
+            color: #eee;
+            background-image: radial-gradient(rgba(212,175,55,0.03) 1px,transparent 1px);
             background-size: 30px 30px;
         }
-
         .container {
             max-width: 1100px;
             margin: 0 auto;
             padding: 30px 20px;
         }
-
         header {
             text-align: center;
-            margin-bottom: 28px;
-            padding: 32px 20px;
+            padding: 30px 20px;
             background: #0d0d14;
             border-radius: 16px;
-            box-shadow: 0 0 10px rgba(212, 175, 55, 0.08);
-            border: 1px solid rgba(212, 175, 55, 0.12);
+            border: 1px solid rgba(212,175,55,0.15);
+            margin-bottom: 25px;
         }
-
         h1 {
-            background: linear-gradient(90deg, #c8a440, #ffe699, #c8a440);
+            background: linear-gradient(90deg,#c8a440,#ffe699);
             -webkit-background-clip: text;
-            background-clip: text;
             color: transparent;
-            margin-bottom: 12px;
-            font-weight: 600;
-            letter-spacing: 2px;
             font-size: 32px;
+            margin-bottom: 10px;
         }
-
         header p {
             color: #a2a2b5;
-            font-size: 15px;
         }
-
         .test-info {
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            margin-bottom: 22px;
-            padding: 16px 22px;
+            padding: 15px 20px;
             background: #0a0a10;
             border-radius: 12px;
-            border: 1px solid rgba(212, 175, 55, 0.1);
+            margin-bottom: 20px;
         }
-
         .timer {
-            font-weight: 500;
             color: #ff7070;
+            font-weight: 500;
         }
-
+        .type-tag {
+            color: #d4af37;
+            margin-left: 15px;
+        }
         .progress-bar {
             width: 100%;
-            height: 16px;
+            height: 14px;
             background: #08080d;
             border-radius: 999px;
-            margin-bottom: 26px;
             overflow: hidden;
-            border: 1px solid rgba(212, 175, 55, 0.12);
+            margin-bottom: 25px;
         }
-
         .progress-fill {
             height: 100%;
-            background: linear-gradient(90deg, #b08828, #e6c260);
+            background: linear-gradient(90deg,#b08828,#e6c260);
             width: 0%;
-            transition: width 0.3s ease;
-            box-shadow: 0 0 8px rgba(212, 175, 55, 0.4);
-            border-radius: 999px;
+            transition: 0.3s;
         }
-
         #question-container {
             background: #0d0d14;
+            padding: 30px;
             border-radius: 16px;
-            padding: 32px;
-            margin-bottom: 24px;
-            border: 1px solid rgba(212, 175, 55, 0.12);
-            min-height: 220px;
+            border: 1px solid rgba(212,175,55,0.15);
+            min-height: 280px;
+            position: relative;
+            margin-bottom: 25px;
         }
-
+        .question-img-box {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            max-width: 170px;
+        }
+        .question-img-box img {
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid rgba(212,175,55,0.2);
+        }
         .question-number {
-            font-weight: bold;
-            color: #d4af37;
-            margin-bottom: 18px;
             font-size: 20px;
+            color: #d4af37;
+            font-weight: bold;
+            margin-bottom: 15px;
         }
-
         .question-text {
-            margin-bottom: 24px;
             font-size: 17px;
             line-height: 1.8;
+            padding-right: 190px;
+            margin-bottom: 25px;
             color: #f0f0f8;
         }
-
-        .options {
-            margin-bottom: 28px;
-        }
-
         .option {
-            margin-bottom: 16px;
-            cursor: pointer;
-            padding: 16px 20px;
-            border-radius: 10px;
-            transition: all 0.2s ease;
+            padding: 14px 18px;
             background: #08080d;
-            border: 1px solid rgba(212, 175, 55, 0.06);
+            border-radius: 8px;
+            margin-bottom: 12px;
+            border: 1px solid rgba(212,175,55,0.08);
+            cursor: pointer;
         }
-
         .option:hover {
-            background: rgba(212, 175, 55, 0.06);
-            border-color: rgba(212, 175, 55, 0.3);
+            border-color: rgba(212,175,55,0.3);
         }
-
         .option input {
-            margin-right: 14px;
+            margin-right: 12px;
             accent-color: #d4af37;
         }
-
-        .button-container {
-            margin-bottom: 30px;
-        }
-
-        .btn {
-            background: linear-gradient(135deg, #8c6d20, #d4af37);
-            color: #000;
-            font-weight: 600;
-            border: none;
-            padding: 14px 28px;
-            border-radius: 10px;
-            cursor: pointer;
+        .fill-input {
+            width: 100%;
+            padding: 14px;
+            background: #08080d;
+            border: 1px solid rgba(212,175,55,0.2);
+            border-radius: 8px;
+            color: #fff;
             font-size: 16px;
-            transition: all 0.25s ease;
-            margin-right: 14px;
+            outline: none;
         }
-
+        .btn {
+            padding: 12px 25px;
+            background: linear-gradient(135deg,#8c6d20,#d4af37);
+            color: #000;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-right: 12px;
+            font-size: 15px;
+        }
         .btn:hover {
-            background: linear-gradient(135deg, #a88226, #f0d070);
-            box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
-            transform: translateY(-1px);
+            box-shadow: 0 0 8px rgba(212,175,55,0.3);
         }
-
         .btn:disabled {
-            background: #1a1a24;
+            background: #222;
             color: #666;
-            box-shadow: none;
-            transform: none;
             cursor: not-allowed;
         }
-
         .result-container {
             background: #0d0d14;
+            padding: 30px;
             border-radius: 16px;
-            padding: 32px;
-            margin-top: 20px;
-            border: 1px solid rgba(212, 175, 55, 0.12);
+            border: 1px solid rgba(212,175,55,0.15);
         }
-
         .score {
-            font-size: 28px;
+            font-size: 26px;
             font-weight: bold;
-            background: linear-gradient(90deg, #d4af37, #ffe89c);
+            background: linear-gradient(90deg,#d4af37,#ffe89c);
             -webkit-background-clip: text;
-            background-clip: text;
             color: transparent;
-            margin-bottom: 24px;
-        }
-
-        .analysis-item {
             margin-bottom: 20px;
-            padding: 20px;
-            border-radius: 10px;
+        }
+        .analysis-item {
+            padding: 18px;
             background: #08080d;
-            border: 1px solid rgba(212, 175, 55, 0.08);
+            border-radius: 8px;
+            margin-bottom: 15px;
         }
-
-        .analysis-question {
-            font-weight: bold;
-            margin-bottom: 12px;
+        .analysis-q {
             color: #e6c870;
+            font-weight: bold;
+            margin-bottom: 8px;
         }
-
-        .analysis-answer {
-            margin-bottom: 10px;
+        .analysis-right {
             color: #79dd6f;
+            margin-bottom: 6px;
         }
-
-        .analysis-explanation {
-            line-height: 1.7;
-            color: #c0c0d2;
-        }
-
         .hidden {
             display: none;
         }
@@ -215,179 +185,220 @@
 <div class="container">
     <header>
         <h1>Guo的小问答</h1>
-        <p>考验你关于果果的小知识</p>
+        <p>考考你关于果果的小知识</p>
     </header>
-
     <div class="test-info">
-        <div class="timer">剩余时间: <span id="timer">30:00</span></div>
-        <div class="progress-text">进度: <span id="progress-text">0/0</span></div>
+        <div class="timer">剩余时间：<span id="timer">30:00</span></div>
+        <div>
+            <span class="type-tag" id="qType">题型：</span>
+            <span>进度：<span id="progressText">0/20</span></span>
+        </div>
     </div>
-
     <div class="progress-bar">
-        <div class="progress-fill" id="progress-fill"></div>
+        <div class="progress-fill" id="progressBar"></div>
     </div>
-
-    <div id="question-container">加载题库中...</div>
-
-    <div class="button-container">
-        <button class="btn" id="prev-btn">上一题</button>
-        <button class="btn" id="next-btn">下一题</button>
-        <button class="btn" id="submit-btn">提交测试</button>
+    <div id="questionBox">正在加载题库...</div>
+    <div style="margin:20px 0;">
+        <button class="btn" id="prevBtn">上一题</button>
+        <button class="btn" id="nextBtn">下一题</button>
+        <button class="btn" id="submitBtn">交卷评分</button>
     </div>
-
-    <div id="result-container" class="hidden">
-        <div class="score">测试得分: <span id="score">0</span>/0</div>
-        <div class="analysis-container" id="analysis-container"></div>
+    <div id="resultBox" class="hidden">
+        <div class="score">本次得分：<span id="userScore">0</span> / 20</div>
+        <div id="answerAnalyze"></div>
     </div>
 </div>
+
 <script>
-    let questionBank = [];
-    let currentQuestionIndex = 0;
-    let userAnswers = [];
-    let timer = null;
-    let remainingTime = 30 * 60;
+// 全局配置
+const ALL_COUNT = 20;
+const MUST_SINGLE = 10; // 强制固定10道单选
+let allQuestion = [];
+let examList = [];
+let nowIdx = 0;
+let userAnswer = [];
+let timeLeft = 30 * 60;
+let timerRun = null;
 
-    // 新增：从tk.json加载题库
-    async function loadQuestionJson() {
-        try {
-            const res = await fetch("./tk.json");
-            if (!res.ok) throw new Error("找不到tk.json，请和html放在同一文件夹");
-            questionBank = await res.json();
-            initTest();
-        } catch (err) {
-            document.getElementById("question-container").innerHTML = `<div style="color:#ff7070;text-align:center;padding:60px 0;">题库加载失败：${err.message}</div>`;
-            console.error("题库读取错误：", err);
+// 读取本地题库tk.json
+fetch("tk.json")
+.then(res=>res.json())
+.then(data=>{
+    allQuestion = data;
+    makeExamPaper();
+})
+.catch(()=>{
+    document.getElementById("questionBox").innerHTML = `<div style="text-align:center;color:#f66;padding:60px 0">请将题库 tk.json 和网页放在同一目录</div>`;
+})
+
+// 组卷核心：强制10单选 + 剩余10题自由混合
+function makeExamPaper(){
+    // 筛选纯单选题
+    let singlePool = allQuestion.filter(item=>{
+        return !Array.isArray(item.answer);
+    });
+    // 剩余所有题型池：单选/多选/填空
+    let mixPool = [...allQuestion];
+
+    // 打乱题库
+    function shuffle(arr){
+        let a = [...arr];
+        for(let i=a.length-1;i>0;i--){
+            let r = Math.floor(Math.random()*(i+1));
+            [a[i],a[r]] = [a[r],a[i]];
         }
+        return a;
     }
 
-    // 初始化测试
-    function initTest() {
-        // 随机打乱题库，取全部题目考试
-        const shuffledQuestions = shuffle([...questionBank]);
-        window.testQuestions = shuffledQuestions.slice(0,20);
-        userAnswers = new Array(window.testQuestions.length).fill(null);
+    singlePool = shuffle(singlePool);
+    mixPool = shuffle(mixPool);
 
-        if(window.testQuestions.length === 0){
-            document.getElementById('question-container').innerHTML = `<div style="text-align:center;padding:80px 0;color:#888;">tk.json内无题目</div>`;
-            return;
-        }
-        showQuestion(0);
-        startTimer();
+    // 先选出固定10道单选
+    let fixedSingle = singlePool.slice(0,MUST_SINGLE);
+    // 再从混合池抽剩下10题（任意题型）
+    let freeList = mixPool.slice(0, ALL_COUNT - MUST_SINGLE);
+
+    // 合并整套20题试卷
+    examList = shuffle([...fixedSingle,...freeList]);
+    userAnswer = new Array(ALL_COUNT).fill(null);
+
+    nowIdx = 0;
+    showQues(nowIdx);
+    startTimer();
+}
+
+// 判断题型
+function getTypeStr(q){
+    if(!q.options) return "文本填空题";
+    if(Array.isArray(q.answer)) return "多项选择题";
+    return "单项选择题";
+}
+
+// 渲染题目
+function showQues(idx){
+    let q = examList[idx];
+    let box = document.getElementById("questionBox");
+    document.getElementById("qType").innerText = "题型："+getTypeStr(q);
+    document.getElementById("progressText").innerText = `${idx+1}/${ALL_COUNT}`;
+    document.getElementById("progressBar").style.width = ((idx+1)/ALL_COUNT*100)+"%";
+
+    let imgDom = q.file ? `<div class="question-img-box"><img src="${q.file}"></div>` : "";
+    let html = `${imgDom}
+    <div class="question-number">第${idx+1}题</div>
+    <div class="question-text">${q.text}</div>`;
+
+    // 文本填空
+    if(!q.options){
+        let val = userAnswer[idx]||"";
+        html += `<input class="fill-input" id="fillInput" placeholder="在此输入答案" value="${val}">`;
     }
-
-    // 打乱数组
-    function shuffle(array) {
-        const newArray = [...array];
-        for (let i = newArray.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
-        }
-        return newArray;
-    }
-
-    // 渲染题目
-    function showQuestion(index) {
-        const question = window.testQuestions[index];
-        const container = document.getElementById('question-container');
-
-        let html = `<div class="question-number">第${index + 1}题</div><div class="question-text">${question.text}</div><div class="options">`;
-        for (let i = 0; i < question.options.length; i++) {
-            const checked = userAnswers[index] === i ? 'checked' : '';
+    // 选择题
+    else{
+        html += `<div class="optionsBox">`;
+        q.options.forEach((opt,i)=>{
+            let name = Array.isArray(q.answer) ? "mulAns" : "singleAns";
+            let checked = false;
+            if(userAnswer[idx] !== null){
+                if(!Array.isArray(q.answer) && userAnswer[idx] === opt) checked=true;
+                if(Array.isArray(q.answer) && userAnswer[idx]?.includes(opt)) checked=true;
+            }
+            let inpType = Array.isArray(q.answer) ? "checkbox" : "radio";
             html += `
-                <div class="option">
-                    <input type="radio" name="ans" id="opt${i}" value="${i}" ${checked}>
-                    <label for="opt${i}">${question.options[i]}</label>
-                </div>
-            `;
-        }
+            <div class="option">
+                <input type="${inpType}" name="${name}" value="${opt}" ${checked?"checked":""}>${opt}
+            </div>`;
+        })
         html += `</div>`;
-        container.innerHTML = html;
-
-        updateProgress(index);
-        document.getElementById('prev-btn').disabled = index === 0;
-        document.getElementById('next-btn').disabled = index === window.testQuestions.length - 1;
     }
+    box.innerHTML = html;
+}
 
-    // 更新进度条
-    function updateProgress(index) {
-        const total = window.testQuestions.length;
-        const percent = ((index + 1) / total) * 100;
-        document.getElementById('progress-fill').style.width = percent + '%';
-        document.getElementById('progress-text').textContent = `${index+1}/${total}`;
+// 保存当前答案
+function saveNowAns(){
+    let q = examList[nowIdx];
+    if(!q.options){
+        let txt = document.getElementById("fillInput").value.trim();
+        userAnswer[nowIdx] = txt;
+    }else if(Array.isArray(q.answer)){
+        let selects = [];
+        document.querySelectorAll('input[name="mulAns"]:checked').forEach(el=>{
+            selects.push(el.value);
+        })
+        userAnswer[nowIdx] = selects;
+    }else{
+        let sel = document.querySelector('input[name="singleAns"]:checked');
+        userAnswer[nowIdx] = sel ? sel.value : null;
     }
+}
 
-    // 倒计时
-    function startTimer() {
-        timer = setInterval(() => {
-            remainingTime--;
-            const m = Math.floor(remainingTime / 60).toString().padStart(2,'0');
-            const s = (remainingTime % 60).toString().padStart(2,'0');
-            document.getElementById('timer').textContent = `${m}:${s}`;
-            if (remainingTime <= 0) submitTest();
-        }, 1000);
+// 上一题
+document.getElementById("prevBtn").onclick = function(){
+    saveNowAns();
+    if(nowIdx>0){
+        nowIdx--;
+        showQues(nowIdx);
     }
-
-    // 保存当前选择
-    function saveAnswer() {
-        const radios = document.querySelectorAll('input[name="ans"]:checked');
-        userAnswers[currentQuestionIndex] = radios.length ? Number(radios[0].value) : null;
+}
+// 下一题
+document.getElementById("nextBtn").onclick = function(){
+    saveNowAns();
+    if(nowIdx<ALL_COUNT-1){
+        nowIdx++;
+        showQues(nowIdx);
     }
+}
 
-    function prevQuestion() {
-        saveAnswer();
-        currentQuestionIndex--;
-        showQuestion(currentQuestionIndex);
-    }
+// 交卷评分
+document.getElementById("submitBtn").onclick = function(){
+    saveNowAns();
+    clearInterval(timerRun);
+    let score = 0;
+    let analyzeHtml = "";
+    for(let i=0;i<examList.length;i++){
+        let q = examList[i];
+        let uAns = userAnswer[i];
+        let right = false;
 
-    function nextQuestion() {
-        saveAnswer();
-        currentQuestionIndex++;
-        showQuestion(currentQuestionIndex);
-    }
-
-    // 交卷判分
-    function submitTest() {
-        saveAnswer();
-        clearInterval(timer);
-        let score = 0;
-        const total = window.testQuestions.length;
-        for(let i=0;i<total;i++){
-            const q = window.testQuestions[i];
-            const sel = userAnswers[i];
-            if(sel !== null && q.options[sel] === q.answer) score++;
+        // 单选判断
+        if(!Array.isArray(q.answer) && q.options){
+            if(uAns === q.answer) right=true;
+        }
+        // 多选判断
+        else if(Array.isArray(q.answer)){
+            if(Array.isArray(uAns) && uAns.length===q.answer.length){
+                let same = q.answer.every(v=>uAns.includes(v));
+                if(same) right=true;
+            }
+        }
+        // 填空判断（包含匹配）
+        else if(!q.options){
+            if(q.answer.includes(uAns)) right=true;
         }
 
-        // 展示结果
-        document.getElementById('score').innerText = score;
-        const analysisBox = document.getElementById('analysis-container');
-        let html = '';
-        for(let i=0;i<total;i++){
-            const q = window.testQuestions[i];
-            const selIdx = userAnswers[i];
-            const myAns = selIdx !== null ? q.options[selIdx] : '未作答';
-            html += `
-                <div class="analysis-item">
-                    <div class="analysis-question">第${i+1}题：${q.text}</div>
-                    <div class="analysis-answer">你的答案：${myAns}</div>
-                    <div class="analysis-answer">正确答案：${q.answer}</div>
-                    <div class="analysis-explanation">解析：${q.explanation}</div>
-                </div>
-            `;
-        }
-        analysisBox.innerHTML = html;
+        if(right) score++;
 
-        document.getElementById('question-container').classList.add('hidden');
-        document.querySelector('.button-container').classList.add('hidden');
-        document.getElementById('result-container').classList.remove('hidden');
+        analyzeHtml += `
+        <div class="analysis-item">
+            <div class="analysis-q">第${i+1}题：${q.text}</div>
+            <div class="analysis-right">正确答案：${Array.isArray(q.answer)?q.answer.join("、"):q.answer}</div>
+            <div style="color:#ccc;font-size:14px">解析：${q.explanation}</div>
+        </div>`;
     }
+    document.getElementById("userScore").innerText = score;
+    document.getElementById("answerAnalyze").innerHTML = analyzeHtml;
+    document.getElementById("resultBox").classList.remove("hidden");
+}
 
-    // 绑定按钮事件
-    document.getElementById('prev-btn').onclick = prevQuestion;
-    document.getElementById('next-btn').onclick = nextQuestion;
-    document.getElementById('submit-btn').onclick = submitTest;
-
-    // 页面加载完成读取json题库
-    window.onload = loadQuestionJson;
+// 倒计时
+function startTimer(){
+    timerRun = setInterval(()=>{
+        timeLeft--;
+        let m = Math.floor(timeLeft/60);
+        let s = timeLeft%60;
+        document.getElementById("timer").innerText = `${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+        if(timeLeft<=0) clearInterval(timerRun);
+    },1000)
+}
 </script>
 </body>
 </html>
