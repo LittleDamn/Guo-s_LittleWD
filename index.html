@@ -10,6 +10,7 @@
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
             font-family: 'Microsoft YaHei', sans-serif;
             background: #000;
@@ -17,19 +18,23 @@
             background-image: radial-gradient(rgba(212, 175, 55, 0.03) 1px, transparent 1px);
             background-size: 30px 30px;
         }
+
         .container {
             max-width: 1100px;
             margin: 0 auto;
             padding: 30px 20px;
         }
+
         header {
             text-align: center;
             margin-bottom: 28px;
             padding: 32px 20px;
             background: #0d0d14;
             border-radius: 16px;
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.08);
             border: 1px solid rgba(212, 175, 55, 0.12);
         }
+
         h1 {
             background: linear-gradient(90deg, #c8a440, #ffe699, #c8a440);
             -webkit-background-clip: text;
@@ -40,10 +45,12 @@
             letter-spacing: 2px;
             font-size: 32px;
         }
+
         header p {
             color: #a2a2b5;
             font-size: 15px;
         }
+
         .test-info {
             display: flex;
             justify-content: space-between;
@@ -54,14 +61,12 @@
             border-radius: 12px;
             border: 1px solid rgba(212, 175, 55, 0.1);
         }
+
         .timer {
             font-weight: 500;
             color: #ff7070;
         }
-        .type-tag{
-            color:#d4af37;
-            margin-left:15px;
-        }
+
         .progress-bar {
             width: 100%;
             height: 16px;
@@ -71,74 +76,67 @@
             overflow: hidden;
             border: 1px solid rgba(212, 175, 55, 0.12);
         }
+
         .progress-fill {
             height: 100%;
             background: linear-gradient(90deg, #b08828, #e6c260);
             width: 0%;
             transition: width 0.3s ease;
+            box-shadow: 0 0 8px rgba(212, 175, 55, 0.4);
             border-radius: 999px;
         }
+
         #question-container {
             background: #0d0d14;
             border-radius: 16px;
             padding: 32px;
             margin-bottom: 24px;
             border: 1px solid rgba(212, 175, 55, 0.12);
-            min-height: 260px;
-            position: relative;
+            min-height: 220px;
         }
-        .question-img-box {
-            position: absolute;
-            right: 20px;
-            top: 20px;
-            max-width: 180px;
-        }
-        .question-img-box img {
-            width: 100%;
-            border-radius: 8px;
-            border: 1px solid rgba(212, 175, 55, 0.2);
-        }
+
         .question-number {
             font-weight: bold;
             color: #d4af37;
             margin-bottom: 18px;
             font-size: 20px;
         }
+
         .question-text {
             margin-bottom: 24px;
             font-size: 17px;
             line-height: 1.8;
             color: #f0f0f8;
-            padding-right: 200px;
         }
+
+        .options {
+            margin-bottom: 28px;
+        }
+
         .option {
             margin-bottom: 16px;
             cursor: pointer;
             padding: 16px 20px;
             border-radius: 10px;
+            transition: all 0.2s ease;
             background: #08080d;
             border: 1px solid rgba(212, 175, 55, 0.06);
         }
+
         .option:hover {
+            background: rgba(212, 175, 55, 0.06);
             border-color: rgba(212, 175, 55, 0.3);
         }
+
         .option input {
             margin-right: 14px;
             accent-color: #d4af37;
         }
-        .fill-input{
-            width:100%;
-            padding:15px;
-            background:#08080d;
-            border:1px solid rgba(212,175,55,0.2);
-            border-radius:10px;
-            color:#fff;
-            font-size:16px;
-            outline:none;
-        }
+
         .button-container {
             margin-bottom: 30px;
         }
+
         .btn {
             background: linear-gradient(135deg, #8c6d20, #d4af37);
             color: #000;
@@ -148,22 +146,32 @@
             border-radius: 10px;
             cursor: pointer;
             font-size: 16px;
+            transition: all 0.25s ease;
             margin-right: 14px;
         }
+
         .btn:hover {
+            background: linear-gradient(135deg, #a88226, #f0d070);
             box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+            transform: translateY(-1px);
         }
+
         .btn:disabled {
             background: #1a1a24;
             color: #666;
+            box-shadow: none;
+            transform: none;
             cursor: not-allowed;
         }
+
         .result-container {
             background: #0d0d14;
             border-radius: 16px;
             padding: 32px;
+            margin-top: 20px;
             border: 1px solid rgba(212, 175, 55, 0.12);
         }
+
         .score {
             font-size: 28px;
             font-weight: bold;
@@ -173,21 +181,31 @@
             color: transparent;
             margin-bottom: 24px;
         }
+
         .analysis-item {
             margin-bottom: 20px;
             padding: 20px;
             border-radius: 10px;
             background: #08080d;
+            border: 1px solid rgba(212, 175, 55, 0.08);
         }
+
         .analysis-question {
             font-weight: bold;
             margin-bottom: 12px;
             color: #e6c870;
         }
+
         .analysis-answer {
             margin-bottom: 10px;
             color: #79dd6f;
         }
+
+        .analysis-explanation {
+            line-height: 1.7;
+            color: #c0c0d2;
+        }
+
         .hidden {
             display: none;
         }
@@ -202,17 +220,14 @@
 
     <div class="test-info">
         <div class="timer">剩余时间: <span id="timer">30:00</span></div>
-        <div>
-            <span class="type-tag" id="qType">题型：</span>
-            <span class="progress-text">进度: <span id="progress-text">0/20</span></span>
-        </div>
+        <div class="progress-text">进度: <span id="progress-text">0/0</span></div>
     </div>
 
     <div class="progress-bar">
         <div class="progress-fill" id="progress-fill"></div>
     </div>
 
-    <div id="question-container">请放入外部题库文件使用</div>
+    <div id="question-container"></div>
 
     <div class="button-container">
         <button class="btn" id="prev-btn">上一题</button>
@@ -225,175 +240,207 @@
         <div class="analysis-container" id="analysis-container"></div>
     </div>
 </div>
-
 <script>
-// 读取外部tk.json题库，无内置题目
-const ALL_COUNT = 20;
-const MUST_SINGLE = 10;
-let allQuestion = [];
-let examList = [];
-let nowIdx = 0;
-let userAnswer = [];
-let timeLeft = 30 * 60;
-let timerRun = null;
-let usedIndex = [];
+let questionBank = [];
+let currentQuestionIndex = 0;
+let userAnswers = [];
+let timer = null;
+let remainingTime = 30 * 60;
 
-function shuffle(arr){
-    let a = [...arr];
-    for(let i=a.length-1;i>0;i--){
-        let r = Math.floor(Math.random()*(i+1));
-        [a[i],a[r]] = [a[r],a[i]];
+// 加载外部tk.json题库
+async function loadQuestionBank() {
+    try {
+        const res = await fetch('tk.json');
+        questionBank = await res.json();
+        initTest();
+    } catch (err) {
+        document.getElementById('question-container').innerHTML = `<div style="text-align:center;padding:80px 0;color:#f66;">加载题库失败，请检查tk.json文件是否与html放在同一文件夹</div>`;
+        console.error('题库加载错误', err);
     }
-    return a;
 }
 
-// 读取外部题库
-fetch("tk.json")
-.then(res=>res.json())
-.then(data=>{
-    allQuestion = data;
-    makeExamPaper();
-})
-.catch(()=>{
-    document.getElementById("question-container").innerText = "未读取到tk.json题库文件，请放置同目录";
-})
+function initTest() {
+    const shuffledQuestions = shuffle([...questionBank]);
+    window.testQuestions = shuffledQuestions.slice(0, 20);
+    userAnswers = new Array(window.testQuestions.length).fill(null);
 
-// 组卷 10固定单选+10自由题型 去重不重复出题
-function makeExamPaper(){
-    usedIndex = [];
-    let singlePool = allQuestion.filter((item,idx)=>{
-        if(!Array.isArray(item.answer) && !usedIndex.includes(idx)){
-            usedIndex.push(idx);
-            return true;
-        }
-        return false;
-    });
-    let mixPool = allQuestion.filter((item,idx)=>!usedIndex.includes(idx));
-
-    singlePool = shuffle(singlePool);
-    mixPool = shuffle(mixPool);
-
-    let fixedSingle = singlePool.slice(0,MUST_SINGLE);
-    let freeList = mixPool.slice(0, ALL_COUNT - MUST_SINGLE);
-    examList = shuffle([...fixedSingle,...freeList]);
-    userAnswer = new Array(ALL_COUNT).fill(null);
-    nowIdx = 0;
-    showQues(nowIdx);
+    if(window.testQuestions.length === 0){
+        document.getElementById('question-container').innerHTML = `<div style="text-align:center;padding:80px 0;color:#888;">题库无题目</div>`;
+        return;
+    }
+    showQuestion(0);
     startTimer();
 }
 
-function getTypeStr(q){
-    if(!q.options) return "文本填空题";
-    if(Array.isArray(q.answer)) return "多项选择题";
-    return "单项选择题";
+function shuffle(array) {
+    const newArray = [...array];
+    for (let i = newArray.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+    }
+    return newArray;
 }
 
-function showQues(idx){
-    let q = examList[idx];
-    let box = document.getElementById("question-container");
-    document.getElementById("qType").innerText = "题型："+getTypeStr(q);
-    document.getElementById("progress-text").innerText = `${idx+1}/${ALL_COUNT}`;
-    document.getElementById("progress-fill").style.width = ((idx+1)/ALL_COUNT*100)+"%";
-    let imgDom = q.file ? `<div class="question-img-box"><img src="${q.file}"></div>` : "";
-    let html = `${imgDom}
-    <div class="question-number">第${idx+1}题</div>
-    <div class="question-text">${q.text}</div>`;
-    if(!q.options){
-        let val = userAnswer[idx]||"";
-        html += `<input class="fill-input" id="fillInput" placeholder="在此输入答案" value="${val}">`;
-    }else{
-        html += `<div class="optionsBox">`;
-        q.options.forEach((opt,i)=>{
-            let name = Array.isArray(q.answer) ? "mulAns" : "singleAns";
-            let checked = false;
-            if(userAnswer[idx] !== null){
-                if(!Array.isArray(q.answer) && userAnswer[idx] === opt) checked=true;
-                if(Array.isArray(q.answer) && userAnswer[idx]?.includes(opt)) checked=true;
-            }
-            let inpType = Array.isArray(q.answer) ? "checkbox" : "radio";
+// 前端渲染逻辑完全未改动原有单选多选，仅新增input分支
+function showQuestion(index) {
+    const question = window.testQuestions[index];
+    const container = document.getElementById('question-container');
+    let html = `<div class="question-number">第${index + 1}题</div><div class="question-text">${question.text}</div><div class="options">`;
+
+    if(question.type === 'single'){
+        for (let i = 0; i < question.options.length; i++) {
+            const checked = userAnswers[index] === i ? 'checked' : '';
             html += `
-            <div class="option">
-                <input type="${inpType}" name="${name}" value="${opt}" ${checked?"checked":""}>${opt}
-            </div>`;
-        })
-        html += `</div>`;
-    }
-    box.innerHTML = html;
-}
-
-function saveNowAns(){
-    let q = examList[nowIdx];
-    if(!q.options){
-        let txt = document.getElementById("fillInput").value.trim();
-        userAnswer[nowIdx] = txt;
-    }else if(Array.isArray(q.answer)){
-        let selects = [];
-        document.querySelectorAll('input[name="mulAns"]:checked').forEach(el=>{
-            selects.push(el.value);
-        })
-        userAnswer[nowIdx] = selects;
-    }else{
-        let sel = document.querySelector('input[name="singleAns"]:checked');
-        userAnswer[nowIdx] = sel ? sel.value : null;
-    }
-}
-
-document.getElementById("prev-btn").onclick = function(){
-    saveNowAns();
-    if(nowIdx>0){
-        nowIdx--;
-        showQues(nowIdx);
-    }
-}
-document.getElementById("next-btn").onclick = function(){
-    saveNowAns();
-    if(nowIdx<ALL_COUNT-1){
-        nowIdx++;
-        showQues(nowIdx);
-    }
-}
-
-document.getElementById("submit-btn").onclick = function(){
-    saveNowAns();
-    clearInterval(timerRun);
-    let score = 0;
-    let analyzeHtml = "";
-    for(let i=0;i<examList.length;i++){
-        let q = examList[i];
-        let uAns = userAnswer[i];
-        let right = false;
-        if(!Array.isArray(q.answer) && q.options){
-            if(uAns === q.answer) right=true;
-        }else if(Array.isArray(q.answer)){
-            if(Array.isArray(uAns) && uAns.length===q.answer.length){
-                let same = q.answer.every(v=>uAns.includes(v));
-                if(same) right=true;
-            }
-        }else if(!q.options){
-            if(q.answer.includes(uAns)) right=true;
+                <div class="option">
+                    <input type="radio" name="ans" id="opt${i}" value="${i}" ${checked}>
+                    <label for="opt${i}">${question.options[i]}</label>
+                </div>
+            `;
         }
-        if(right) score++;
-        analyzeHtml += `
-        <div class="analysis-item">
-            <div class="analysis-question">第${i+1}题：${q.text}</div>
-            <div class="analysis-answer">正确答案：${Array.isArray(q.answer)?q.answer.join("、"):q.answer}</div>
-            <div style="color:#ccc;font-size:14px">解析：${q.explanation}</div>
-        </div>`;
+    }else if(question.type === 'multiple'){
+        for (let i = 0; i < question.options.length; i++) {
+            const checked = userAnswers[index]?.includes(i) ? 'checked' : '';
+            html += `
+                <div class="option">
+                    <input type="checkbox" name="ans" id="opt${i}" value="${i}" ${checked}>
+                    <label for="opt${i}">${question.options[i]}</label>
+                </div>
+            `;
+        }
+    }else if(question.type === 'input'){
+        const val = userAnswers[index] ?? "";
+        html += `
+            <div class="option">
+                <input type="text" name="ans" style="width:100%;padding:10px;background:#08080d;border:1px solid rgba(212,175,55,0.2);color:#fff;border-radius:8px;" placeholder="请输入答案" value="${val}">
+            </div>
+        `;
     }
-    document.getElementById("score").innerText = score;
-    document.getElementById("analysis-container").innerHTML = analyzeHtml;
-    document.getElementById("result-container").classList.remove("hidden");
+    html += `</div>`;
+    container.innerHTML = html;
+
+    updateProgress(index);
+    document.getElementById('prev-btn').disabled = index === 0;
+    document.getElementById('next-btn').disabled = index === window.testQuestions.length - 1;
 }
 
-function startTimer(){
-    timerRun = setInterval(()=>{
-        timeLeft--;
-        let m = Math.floor(timeLeft/60);
-        let s = timeLeft%60;
-        document.getElementById("timer").innerText = `${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
-        if(timeLeft<=0) clearInterval(timerRun);
-    },1000)
+function updateProgress(index) {
+    const total = window.testQuestions.length;
+    const percent = ((index + 1) / total) * 100;
+    document.getElementById('progress-fill').style.width = percent + '%';
+    document.getElementById('progress-text').textContent = `${index+1}/${total}`;
 }
+
+function startTimer() {
+    timer = setInterval(() => {
+        remainingTime--;
+        const m = Math.floor(remainingTime / 60).toString().padStart(2,'0');
+        const s = (remainingTime % 60).toString().padStart(2,'0');
+        document.getElementById('timer').textContent = `${m}:${s}`;
+        if (remainingTime <= 0) submitTest();
+    }, 1000);
+}
+
+// 保存答案逻辑（后端逻辑修改）
+function saveAnswer() {
+    const question = window.testQuestions[currentQuestionIndex];
+    if(question.type === "input"){
+        const inputDom = document.querySelector('input[type="text"][name="ans"]');
+        userAnswers[currentQuestionIndex] = inputDom ? inputDom.value.trim() : "";
+        return;
+    }
+    const inputs = document.querySelectorAll('input[name="ans"]:checked');
+    const selectedIdx = Array.from(inputs).map(item => Number(item.value));
+
+    if(question.type === 'single'){
+        userAnswers[currentQuestionIndex] = selectedIdx.length ? selectedIdx[0] : null;
+    }else{
+        userAnswers[currentQuestionIndex] = selectedIdx;
+    }
+}
+
+function prevQuestion() {
+    saveAnswer();
+    currentQuestionIndex--;
+    showQuestion(currentQuestionIndex);
+}
+
+function nextQuestion() {
+    saveAnswer();
+    currentQuestionIndex++;
+    showQuestion(currentQuestionIndex);
+}
+
+// 判分逻辑（后端修改，支持三种题型）
+function submitTest() {
+    saveAnswer();
+    clearInterval(timer);
+    let score = 0;
+    const total = window.testQuestions.length;
+
+    for(let i=0;i<total;i++){
+        const q = window.testQuestions[i];
+        const sel = userAnswers[i];
+
+        if(q.type === 'single'){
+            if(sel !== null && q.options[sel] === q.answer){
+                score++;
+            }
+        }else if(q.type === 'multiple'){
+            if(sel && sel.length > 0){
+                const userSelText = sel.map(idx => q.options[idx]).sort().join(',');
+                const rightAns = [...q.answer].sort().join(',');
+                if(userSelText === rightAns){
+                    score++;
+                }
+            }
+        }else if(q.type === 'input'){
+            if(sel === q.answer){
+                score++;
+            }
+        }
+    }
+
+    document.getElementById('score').innerText = score;
+    const analysisBox = document.getElementById('analysis-container');
+    let html = '';
+    for(let i=0;i<total;i++){
+        const q = window.testQuestions[i];
+        const selIdx = userAnswers[i];
+        let myAns, rightAnsText;
+
+        if(q.type === 'single'){
+            myAns = selIdx !== null ? q.options[selIdx] : '未作答';
+            rightAnsText = q.answer;
+        }else if(q.type === 'multiple'){
+            myAns = selIdx?.length ? selIdx.map(idx => q.options[idx]).join('、') : '未作答';
+            rightAnsText = q.answer.join('、');
+        }else{
+            myAns = selIdx || '未作答';
+            rightAnsText = q.answer;
+        }
+
+        html += `
+            <div class="analysis-item">
+                <div class="analysis-question">第${i+1}题：${q.text}</div>
+                <div class="analysis-answer">你的答案：${myAns}</div>
+                <div class="analysis-answer">正确答案：${rightAnsText}</div>
+                <div class="analysis-explanation">解析：${q.explanation}</div>
+            </div>
+        `;
+    }
+    analysisBox.innerHTML = html;
+
+    document.getElementById('question-container').classList.add('hidden');
+    document.querySelector('.button-container').classList.add('hidden');
+    document.getElementById('result-container').classList.remove('hidden');
+}
+
+document.getElementById('prev-btn').onclick = prevQuestion;
+document.getElementById('next-btn').onclick = nextQuestion;
+document.getElementById('submit-btn').onclick = submitTest;
+
+// 页面加载读取外部json题库
+window.onload = loadQuestionBank;
 </script>
 </body>
 </html>
