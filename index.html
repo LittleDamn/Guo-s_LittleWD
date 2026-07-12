@@ -261,7 +261,7 @@ async function loadQuestionBank() {
 
 function initTest() {
     const shuffledQuestions = shuffle([...questionBank]);
-    window.testQuestions = shuffledQuestions.slice(0, 20);
+    window.testQuestions = shuffledQuestions.slice(0, 50);
     userAnswers = new Array(window.testQuestions.length).fill(null);
 
     if(window.testQuestions.length === 0){
